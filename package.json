@@ -1,0 +1,21 @@
+{
+  "name": "beebide",
+  "description": "Web-based IDE for the BBC Micro",
+  "author": {
+    "name": "Matt Godbolt",
+    "email": "matt@godbolt.org",
+    "url": "http://xania.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mattgodbolt/beebide"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "devDependencies": {
+    "bower": "*"
+  },
+  "license": "BSD-2-Clause"
+}
