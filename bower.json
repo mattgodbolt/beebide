@@ -23,6 +23,7 @@
     "raven-js": "^3.7.0",
     "es6-promise": "^4.0.5",
     "install": "^1.0.4",
-    "monaco-editor": "*"
+    "monaco-editor": "*",
+    "requirejs-web-workers": "^1.0.1"
   }
 }

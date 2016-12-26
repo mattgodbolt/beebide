@@ -7,7 +7,8 @@ require.config({
         clipboard: '../bower_components/clipboard/dist/clipboard',
         'raven-js': '../bower_components/raven-js/dist/raven',
         'es6-promise': '../bower_components/es6-promise/es6-promise',
-        'vs': '../bower_components/monaco-editor/dev/vs'
+        'vs': '../bower_components/monaco-editor/dev/vs',
+        'worker': '../bower_components/requirejs-web-workers/src/worker'
     },
     packages: [{
         name: "codemirror",

@@ -18,8 +18,19 @@ define(function (require) {
         this.container.on('resize', function () {
             this.editor.layout();
         }, this);
-        
-        beebasm(['-i', './test.6502', '-do', './foo.ssd'], {'test.6502': text});
+
+        var compile = _.throttle(_.bind(function () {
+            beebasm(['-i', './test.6502'], {'test.6502': this.editor.getValue()}).then(function (e) {
+                console.log("compiled:", e);
+            }).catch(function (e) {
+                console.log("error", e);
+            });
+        }, this), 5000);
+
+        this.editor.getModel().onDidChangeContent(function () {
+            compile();
+        });
+        compile();
     }
 
     return Editor;
