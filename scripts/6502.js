@@ -19,7 +19,9 @@ define(function () {
             'CMP', 'CPX', 'CPY',
             'AND', 'ORA', 'EOR',
             'BPL', 'BMI', 'BEQ', 'BNE', 'BRA', 'BCC', 'BCS', 'BVS', 'BVC',
-            'JMP'
+            'JMP', 'BRK',
+            'ROL', 'ROR', 'ASL',
+            'BIT'
         ],
         directives: [
             'ORG',
@@ -44,11 +46,11 @@ define(function () {
             'PUTFILE',
             'PUTBASIC',
             'MACRO',
-            'ENDMACRO',
+            'ENDMACRO'
         ],
         intrinsics: [
             'LO', 'HI',
-            'SIN', 'COS', 'ABS',
+            'SIN', 'COS', 'TAN', 'ATN', 'ABS', 'SQR',
             'PI', 'FALSE', 'TRUE'
         ],
         operators: [

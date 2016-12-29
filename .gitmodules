@@ -1,0 +1,3 @@
+[submodule "jsbeeb"]
+	path = jsbeeb
+	url = git@github.com:mattgodbolt/jsbeeb

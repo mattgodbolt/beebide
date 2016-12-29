@@ -1,6 +1,6 @@
 define(function (require) {
     var _ = require('underscore');
-    require('es6-promise');
+    require('promise');
     var worker = require('worker!beebasm-worker.js');
     var pending = {};
     worker.onmessage = function (event) {

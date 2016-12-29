@@ -6,15 +6,13 @@ require.config({
         events: '../bower_components/eventEmitter/EventEmitter',
         clipboard: '../bower_components/clipboard/dist/clipboard',
         'raven-js': '../bower_components/raven-js/dist/raven',
-        'es6-promise': '../bower_components/es6-promise/es6-promise',
+        'promise': '../bower_components/es6-promise/es6-promise',
         'vs': '../bower_components/monaco-editor/dev/vs',
-        'worker': '../bower_components/requirejs-web-workers/src/worker'
+        'worker': '../bower_components/requirejs-web-workers/src/worker',
+        'jsbeeb': '../jsbeeb',
+        'jsunzip': '../jsbeeb/lib/jsunzip',
+        'webgl-debug': '../jsbeeb/lib/webgl-debug'
     },
-    packages: [{
-        name: "codemirror",
-        location: "ext/codemirror",
-        main: "lib/codemirror"
-    }],
     shim: {
         underscore: {exports: '_'},
         bootstrap: ['jquery']
@@ -25,13 +23,15 @@ define(function (require) {
     "use strict";
     var _ = require('underscore');
     var Editor = require('editor');
+    var Emulator = require('emulator');
     var GoldenLayout = require('goldenlayout');
     var config = {
         settings: {showPopoutIcon: false},
         content: [{
             type: 'row',
             content: [
-                {type: 'component', componentName: 'editor', componentState: {}}
+                {type: 'component', componentName: 'editor', componentState: {}},
+                {type: 'component', componentName: 'emulator', componentState: {}},
             ]
         }]
     };
@@ -39,6 +39,9 @@ define(function (require) {
     var layout = new GoldenLayout(config);
     layout.registerComponent('editor', function (container, state) {
         return new Editor(container, state);
+    });
+    layout.registerComponent('emulator', function (container, state) {
+        return new Emulator(container, state);
     });
     layout.init();
 });
