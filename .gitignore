@@ -1,4 +1,7 @@
 *.swp
 /node_modules
-/bower_components
-npm-debug.log
+/.npm-up-to-date
+/.bower-up-to-date
+/dist
+/web/vendor
+/npm-debug.log

@@ -12,7 +12,7 @@ define(function (require) {
     var utils = require('jsbeeb/utils');
     var fdc = require('jsbeeb/fdc');
     var Promise = require('promise');
-    utils.setBaseUrl('../jsbeeb/');
+    utils.setBaseUrl('jsbeeb/');
 
     var ClocksPerSecond = (2 * 1000 * 1000) | 0;
     var MaxCyclesPerFrame = ClocksPerSecond / 10;

@@ -1,7 +1,7 @@
-importScripts('../bower_components/requirejs/require.js');
+importScripts('vendor/requirejs/require.js');
 require.config({
     paths: {
-        underscore: '../bower_components/underscore/underscore'
+        underscore: 'vendor/underscore/underscore'
     },
     shim: {
         underscore: {exports: '_'}
@@ -14,7 +14,7 @@ onmessage = function (event) {
 };
 // NB errors of the form 'importScripts failed for underscore at ...' are probably
 // exceptions thrown here...
-require(['../beebasm/beebasm', 'underscore'], function (BeebAsm, _) {
+require(['./beebasm/beebasm', 'underscore'], function (BeebAsm, _) {
     onmessage = function (event) {
         event = event.data;
         try {

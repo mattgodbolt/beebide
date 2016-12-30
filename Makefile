@@ -1,5 +1,5 @@
 NPM_UP_TO_DATE:=.npm-up-to-date
-BOWER_UP_TO_DATE:=.npm-up-to-date
+BOWER_UP_TO_DATE:=.bower-up-to-date
 NODE:=node
 NPM:=npm
 
@@ -21,6 +21,7 @@ clean:
 spotless: clean
 	@rm -f $(NPM_UP_TO_DATE) $(BOWER_UP_TO_DATE)
 
-test: short-tests long-tests
+test: npm bower
+	echo No tests yet
 
 .PHONY: test npm bower all dist clean spotless

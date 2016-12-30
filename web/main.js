@@ -1,18 +1,18 @@
 require.config({
     paths: {
-        jquery: '../bower_components/jquery/dist/jquery',
-        underscore: '../bower_components/underscore/underscore',
-        goldenlayout: '../bower_components/golden-layout/dist/goldenlayout',
-        events: '../bower_components/eventEmitter/EventEmitter',
-        clipboard: '../bower_components/clipboard/dist/clipboard',
-        'raven-js': '../bower_components/raven-js/dist/raven',
-        promise: '../bower_components/es6-promise/es6-promise',
-        vs: '../bower_components/monaco-editor/dev/vs',
-        worker: '../bower_components/requirejs-web-workers/src/worker',
-        jstree: '../bower_components/jstree/dist/jstree',
-        jsbeeb: '../jsbeeb',
-        jsunzip: '../jsbeeb/lib/jsunzip',
-        'webgl-debug': '../jsbeeb/lib/webgl-debug'
+        jquery: 'vendor/jquery/dist/jquery',
+        underscore: 'vendor/underscore/underscore',
+        goldenlayout: 'vendor/golden-layout/dist/goldenlayout',
+        events: 'vendor/eventEmitter/EventEmitter',
+        clipboard: 'vendor/clipboard/dist/clipboard',
+        'raven-js': 'vendor/raven-js/dist/raven',
+        promise: 'vendor/es6-promise/es6-promise',
+        vs: 'vendor/monaco-editor/dev/vs',
+        worker: 'vendor/requirejs-web-workers/src/worker',
+        jstree: 'vendor/jstree/dist/jstree',
+        jsbeeb: 'jsbeeb',
+        jsunzip: 'jsbeeb/lib/jsunzip',
+        'webgl-debug': 'jsbeeb/lib/webgl-debug'
     },
     shim: {
         underscore: {exports: '_'},
