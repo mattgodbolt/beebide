@@ -4,20 +4,25 @@
     <title>beebide</title>
     <link href="beebide.css" rel="stylesheet">
     <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-    <style>
-        .editor {
-            height: 100%;
-            width: 100%;
-        }
-    </style>
 </head>
 <body>
+<div id="navbar" class="navbar">
+    <ul>
+        <li><a href="#">File</a></li>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">Run</a></li>
+    </ul>
+</div>
+<div id="root"></div>
 <div style="display:none">
     <div id="editor">
         <div class="editor"></div>
     </div>
     <div id="emulator">
         <canvas class="screen" width="896" height="600"></canvas>
+    </div>
+    <div id="tree">
+        <div class="tree"></div>
     </div>
 </div>
 </body>

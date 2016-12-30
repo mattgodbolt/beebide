@@ -1,6 +1,45 @@
 @import url("bower_components/golden-layout/src/css/goldenlayout-base.css");
 @import url("bower_components/golden-layout/src/css/goldenlayout-light-theme.css");
+@import url("bower_components/jstree/dist/themes/default/style.css");
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 .template {
     display: none;
+}
+
+.editor {
+    height: 100%;
+    width: 100%;
+}
+
+#navbar {
+    height: 30px;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar li {
+    float: left;
+    text-align: center;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px 14px;
+}
+
+.navbar li a:hover {
+    background-color: #444;
 }

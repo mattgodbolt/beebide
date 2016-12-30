@@ -24,6 +24,7 @@
     "es6-promise": "^4.0.5",
     "install": "^1.0.4",
     "monaco-editor": "*",
-    "requirejs-web-workers": "^1.0.1"
+    "requirejs-web-workers": "^1.0.1",
+    "jstree": "^3.3.3"
   }
 }
