@@ -23,18 +23,19 @@ require.config({
 define(function (require) {
     "use strict";
     var _ = require('underscore');
-    var Editor = require('editor');
-    var Emulator = require('emulator');
-    var Tree = require('tree');
     var GoldenLayout = require('goldenlayout');
     var $ = require('jquery');
+    var Editor = require('./editor');
+    var Emulator = require('./emulator');
+    var Tree = require('./tree');
+    var project = require('./project');
 
     var config = {
         settings: {showPopoutIcon: false},
         content: [{
             type: 'row',
             content: [
-                // {type: 'component', width: 10, componentName: 'tree', componentState: {}},
+                {type: 'component', width: 10, componentName: 'tree', componentState: {}},
                 {type: 'component', width: 50, componentName: 'editor', componentState: {}},
                 {type: 'component', width: 40, componentName: 'emulator', componentState: {}}
             ]
@@ -53,6 +54,10 @@ define(function (require) {
         return new Emulator(container, state);
     });
     layout.init();
+
+    project.load().then(function (project) {
+        layout.eventHub.emit('projectChange', project);
+    });
 
     function sizeRoot() {
         var height = $(window).height() - root.position().top;

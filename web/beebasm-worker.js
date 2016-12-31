@@ -17,6 +17,7 @@ onmessage = function (event) {
 require(['./beebasm/beebasm', 'underscore'], function (BeebAsm, _) {
     onmessage = function (event) {
         event = event.data;
+        console.log(event);
         try {
             var stdout = [];
             var stderr = [];
@@ -24,8 +25,11 @@ require(['./beebasm/beebasm', 'underscore'], function (BeebAsm, _) {
             var module = {
                 arguments: event.command,
                 preRun: function () {
+                    _.each(event.paths, function (path) {
+                        module.FS_createPath('/', path);
+                    });
                     _.each(event.files, function (data, filename) {
-                        module.FS_createDataFile('.', filename, data, true, false, true);
+                        module.FS_createDataFile('/', filename, data, true, false, true);
                     });
                 },
                 print: function (line) {
